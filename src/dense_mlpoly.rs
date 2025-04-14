@@ -151,7 +151,7 @@ impl<F: PrimeField> DensePolynomial<F> {
     &self,
     blinds: &[F],
     gens: &MultiCommitGens<G>,
-  ) -> PolyCommitment<G>{
+  ) -> PolyCommitment<G> {
     let L_size = blinds.len();
     let R_size = self.Z.len() / L_size;
     assert_eq!(L_size * R_size, self.Z.len());
